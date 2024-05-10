@@ -1,0 +1,36 @@
+/* styles/Highlighting.module.css */
+.json-md {
+  @apply bg-white text-gray-800; 
+}
+.dark .json-md {
+  @apply bg-gray-900 text-gray-300; 
+}
+
+.json-md-punctuation {
+  @apply text-black; 
+}
+
+.dark .json-md-punctuation {
+  @apply text-white; 
+}
+
+.json-md-key, .json-md-attr {
+  @apply text-red-500; 
+}
+.dark .json-md-key, .dark .json-md-attr {
+  @apply text-green-300; 
+}
+
+.json-md-string {
+  @apply text-green-600; 
+}
+.dark .json-md-string {
+  @apply text-blue-400; 
+}
+
+.json-md-number {
+  @apply text-blue-600; 
+}
+.dark .json-md-number {
+  @apply text-red-400; 
+}
