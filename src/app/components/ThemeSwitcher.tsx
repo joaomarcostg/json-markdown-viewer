@@ -1,14 +1,22 @@
 "use client";
 import { useTheme } from "next-themes";
+import { useEffect, useState } from "react";
 
 export default function ThemeSwitcher() {
   const { setTheme, resolvedTheme } = useTheme();
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
 
   const toggleTheme = () => {
     const newTheme = resolvedTheme === "light" ? "dark" : "light";
 
     setTheme(newTheme);
   };
+
+  if (!isClient) return <div>Loading Component</div>;
 
   return (
     <button
